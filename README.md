@@ -1,46 +1,40 @@
-# Health Insight Dashboard 🏥
+# Health Insight Dashboard
 ### Next-Gen Vaccine Market Analytics Platform
 
-<div align="center">
+[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Next.js](https://img.shields.io/badge/Next.js-black?style=flat-square&logo=next.js&logoColor=white)](https://nextjs.org/)
+[![Node.js](https://img.shields.io/badge/Node.js-43853D?style=flat-square&logo=node.js&logoColor=white)](https://nodejs.org/)
+[![Google Gemini](https://img.shields.io/badge/Google%20Gemini-8E75B2?style=flat-square&logo=google&logoColor=white)](https://deepmind.google/technologies/gemini/)
+[![Chart.js](https://img.shields.io/badge/Chart.js-FF6384?style=flat-square&logo=chartdotjs&logoColor=white)](https://www.chartjs.org/)
 
-![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
-![Next.js](https://img.shields.io/badge/Next.js-black?style=for-the-badge&logo=next.js&logoColor=white)
-![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
-![Google Gemini](https://img.shields.io/badge/Google%20Gemini-8E75B2?style=for-the-badge&logo=google&logoColor=white)
-![Chart.js](https://img.shields.io/badge/Chart.js-FF6384?style=for-the-badge&logo=chartdotjs&logoColor=white)
-
-</div>
-
-<br />
-
-**Health Insight** is a state-of-the-art analytics dashboard designed to visualize global vaccine market trends. Built with a focus on **User Experience (UX)** and **Performance**, it features a stunning glassmorphism UI, real-time interactive charts, and intelligent business insights powered by **Google's Gemini 1.5 Flash**.
+**Health Insight** is a state-of-the-art analytics dashboard designed to visualize global vaccine market trends. Built with a focus on **User Experience (UX)** and **Performance**, it features a professional UI, real-time interactive charts, and intelligent business insights powered by **Google's Gemini 1.5 Flash**.
 
 ---
 
-## ✨ Key Features
+## Key Features
 
-### 🎨 Premium UI/UX
-- **Glassmorphism Design:** A modern, translucent aesthetic with refined blur effects and depth.
-- **Adaptive Theming:** Seamless **Light (Corporate Clean)** and **Dark (Cyberpunk/Neon)** modes that adjust chart gradients and global colors instantly.
-- **Responsive Layout:** A fluid grid system that scales perfectly from 4K desktops to mobile devices.
+### Premium UI/UX
+- **Professional Design:** A modern, clean aesthetic with refined typography and layout.
+- **Adaptive Theming:** Seamless **Light (Corporate)** and **Dark (High Contrast)** modes that adjust chart gradients and global colors instantly.
+- **Responsive Layout:** A fluid grid system that scales perfectly from desktop monitors to mobile devices.
 
-### 🧠 AI-Powered Intelligence
-- **Google Gemini Integration:** leverages the `gemini-1.5-flash` model to analyze filtered market data in real-time.
+### AI-Powered Intelligence
+- **Google Gemini Integration:** Leverages the `gemini-1.5-flash` model to analyze filtered market data in real-time.
 - **Executive Summaries:** Generates concise, context-aware business insights with a single click.
 
-### 📊 Advanced Visualization
+### Advanced Visualization
 - **5+ Interactive Charts:** 
-  - 📈 **Line Chart:** Multi-year growth trends with gradient fills.
-  - 📊 **Bar Chart:** Regional performance metrics.
-  - 🍩 **Doughnut Chart:** Market share distribution.
-  - 🥧 **Pie Chart:** Brand dominance analysis.
-  - 🕸️ **Radar Chart:** Price sensitivity and unit economics.
+  - **Line Chart:** Multi-year growth trends with gradient fills.
+  - **Bar Chart:** Regional performance metrics.
+  - **Doughnut Chart:** Market share distribution.
+  - **Pie Chart:** Brand dominance analysis.
+  - **Radar Chart:** Price sensitivity and unit economics.
 - **Dynamic Filtering:** Filter dataset by **Region**, **Brand**, and **Year** with auto-updating dropdowns.
 - **Live KPIs:** Instant calculation of CAGR, Total Market Size, and Average Unit Price.
 
 ---
 
-## 📸 Interface Preview
+## Interface Preview
 
 | **Light Mode (Day)** | **Dark Mode (Night)** |
 |:---:|:---:|
@@ -49,12 +43,12 @@
 
 ---
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 - **Frontend:**
   - Framework: [Next.js 13+](https://nextjs.org/) (React)
   - Language: TypeScript
-  - Styling: Custom CSS Variables + Glassmorphism
+  - Styling: Custom CSS Variables + Standardized Layouts
   - Visualization: [Chart.js](https://www.chartjs.org/) + `react-chartjs-2`
   
 - **Backend:**
@@ -65,7 +59,7 @@
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 Follow these instructions to set up the project locally.
 
@@ -111,7 +105,7 @@ npm run dev
 
 ---
 
-## 🔌 API Documentation
+## API Documentation
 
 | Method | Endpoint | Description |
 | :--- | :--- | :--- |
@@ -122,14 +116,14 @@ npm run dev
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 For a deep dive into the system architecture, please refer to our Codemaps:
 
 - [Backend Architecture](docs/CODEMAPS/backend.md)
 - [Frontend Architecture](docs/CODEMAPS/frontend.md)
 
-## 📂 Project Structure
+## Project Structure
 
 ```bash
 CMI-Project/
@@ -152,7 +146,7 @@ CMI-Project/
 
 ---
 
-## 🔮 Future Roadmap
+## Future Roadmap
 
 - [ ] **Database Integration:** Move from JSON to PostgreSQL/MongoDB for scalable data storage.
 - [ ] **User Auth:** Add login/signup via NextAuth.js.
@@ -161,10 +155,10 @@ CMI-Project/
 
 ---
 
-## 📝 License
+## License
 
 This project is open-source and available under the [MIT License](LICENSE).
 
 <div align="center">
-  <sub>Built with ❤️ by the AI & Full Stack Intern Team</sub>
+  <sub>Built by the AI & Full Stack Intern Team</sub>
 </div>

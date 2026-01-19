@@ -57,12 +57,12 @@ export default function Dashboard() {
 
         {/* AI Insight Section */}
         {insight && (
-          <div className="ai-insight">
-            <h3>
-              <span style={{ fontSize: '1.2rem', marginRight: '8px' }}>✦</span> 
-              Executive Market Summary
-            </h3>
-            <div className="ai-text">
+                        className: "ai-insight",
+                        children: [
+                            <h3>
+                                Executive Market Summary
+                            </h3>
+                            <div className="ai-text">
               {insight}
             </div>
             <div style={{ marginTop: '15px', fontSize: '0.75rem', color: 'var(--text-secondary)', fontStyle: 'italic' }}>
