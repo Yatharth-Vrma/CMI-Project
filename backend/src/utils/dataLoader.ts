@@ -20,10 +20,8 @@ export async function loadVaccinesData(): Promise<VaccineRecord[]> {
 
   for (const p of possiblePaths) {
     try {
-      console.log(`[DataLoader] Trying path: ${p}`);
       const text = await fs.readFile(p, { encoding: 'utf-8' });
       cache = JSON.parse(text);
-      console.log(`[DataLoader] Successfully loaded ${cache?.length} records from ${p}`);
       return cache || [];
     } catch (e) {
       // Continue to next path
