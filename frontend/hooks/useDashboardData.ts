@@ -16,15 +16,18 @@ export function useDashboardData() {
   useEffect(() => {
     (async () => {
       try {
+        console.log("Fetching dashboard data with filters:", filters);
         const [s, r] = await Promise.all([
           fetchSummary(filters),
           fetchVaccines(filters)
         ]);
+        console.log("Summary Response:", s);
+        console.log("Records Response:", r);
         setSummary(s);
         setRecords(r);
         setInsight('');
       } catch (error) {
-        console.error("Failed to fetch dashboard data", error);
+        console.error("Failed to fetch dashboard data:", error);
       }
     })();
   }, [filters]);

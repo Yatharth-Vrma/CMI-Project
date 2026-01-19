@@ -25,9 +25,12 @@ loadVaccinesData().then((data) => {
   console.error('Data load error', e);
 });
 
+import healthRouter from './routes/health';
+
 app.use('/api/vaccines', vaccineRouter);
 app.use('/api/summary', summaryRouter);
 app.use('/api/insights', insightsRouter);
+app.use('/api/health', healthRouter);
 
 app.get('/', (_req, res) => res.send('Health Insight Dashboard Backend'));
 
