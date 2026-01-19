@@ -1,0 +1,8 @@
+[
+  {"region":"Americas","country":"USA","brand":"VaxX","year":2020,"marketSize":50000000,"price":12.5},
+  {"region":"Americas","country":"USA","brand":"VaxX","year":2021,"marketSize":62000000,"price":13.0},
+  {"region":"EMEA","country":"Germany","brand":"VaxX","year":2020,"marketSize":48000000,"price":11.8},
+  {"region":"EMEA","country":"Germany","brand":"VaxX","year":2021,"marketSize":60000000,"price":13.2},
+  {"region":"APAC","country":"India","brand":"CureMore","year":2020,"marketSize":4200000,"price":4.0},
+  {"region":"APAC","country":"Japan","brand":"VaxX","year":2021,"marketSize":55000000,"price":14.2}
+]
