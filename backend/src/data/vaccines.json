@@ -1,8 +1,58 @@
 [
-  {"region":"Americas","country":"USA","brand":"VaxX","year":2020,"marketSize":50000000,"price":12.5},
-  {"region":"Americas","country":"USA","brand":"VaxX","year":2021,"marketSize":62000000,"price":13.0},
-  {"region":"EMEA","country":"Germany","brand":"VaxX","year":2020,"marketSize":48000000,"price":11.8},
-  {"region":"EMEA","country":"Germany","brand":"VaxX","year":2021,"marketSize":60000000,"price":13.2},
-  {"region":"APAC","country":"India","brand":"CureMore","year":2020,"marketSize":4200000,"price":4.0},
-  {"region":"APAC","country":"Japan","brand":"VaxX","year":2021,"marketSize":55000000,"price":14.2}
+  { "region": "Americas", "country": "USA", "brand": "VaxX", "year": 2018, "marketSize": 45000000, "price": 12.0 },
+  { "region": "Americas", "country": "USA", "brand": "VaxX", "year": 2019, "marketSize": 48000000, "price": 12.5 },
+  { "region": "Americas", "country": "USA", "brand": "VaxX", "year": 2020, "marketSize": 50000000, "price": 12.5 },
+  { "region": "Americas", "country": "USA", "brand": "VaxX", "year": 2021, "marketSize": 62000000, "price": 13.0 },
+  { "region": "Americas", "country": "USA", "brand": "VaxX", "year": 2022, "marketSize": 65000000, "price": 13.5 },
+  { "region": "Americas", "country": "USA", "brand": "VaxX", "year": 2023, "marketSize": 68000000, "price": 14.0 },
+  { "region": "Americas", "country": "USA", "brand": "VaxX", "year": 2024, "marketSize": 72000000, "price": 14.5 },
+  { "region": "Americas", "country": "USA", "brand": "VaxX", "year": 2025, "marketSize": 75000000, "price": 15.0 },
+
+  { "region": "Americas", "country": "Canada", "brand": "CureMore", "year": 2019, "marketSize": 12000000, "price": 11.0 },
+  { "region": "Americas", "country": "Canada", "brand": "CureMore", "year": 2020, "marketSize": 12500000, "price": 11.5 },
+  { "region": "Americas", "country": "Canada", "brand": "CureMore", "year": 2021, "marketSize": 14000000, "price": 12.0 },
+  { "region": "Americas", "country": "Canada", "brand": "CureMore", "year": 2022, "marketSize": 14500000, "price": 12.2 },
+  { "region": "Americas", "country": "Canada", "brand": "CureMore", "year": 2023, "marketSize": 15000000, "price": 12.5 },
+
+  { "region": "Americas", "country": "Brazil", "brand": "BioShield", "year": 2020, "marketSize": 30000000, "price": 8.0 },
+  { "region": "Americas", "country": "Brazil", "brand": "BioShield", "year": 2021, "marketSize": 35000000, "price": 8.5 },
+  { "region": "Americas", "country": "Brazil", "brand": "BioShield", "year": 2022, "marketSize": 38000000, "price": 9.0 },
+  { "region": "Americas", "country": "Brazil", "brand": "BioShield", "year": 2023, "marketSize": 40000000, "price": 9.2 },
+
+  { "region": "EMEA", "country": "Germany", "brand": "VaxX", "year": 2019, "marketSize": 45000000, "price": 11.5 },
+  { "region": "EMEA", "country": "Germany", "brand": "VaxX", "year": 2020, "marketSize": 48000000, "price": 11.8 },
+  { "region": "EMEA", "country": "Germany", "brand": "VaxX", "year": 2021, "marketSize": 60000000, "price": 13.2 },
+  { "region": "EMEA", "country": "Germany", "brand": "VaxX", "year": 2022, "marketSize": 63000000, "price": 13.8 },
+  { "region": "EMEA", "country": "Germany", "brand": "VaxX", "year": 2023, "marketSize": 66000000, "price": 14.2 },
+
+  { "region": "EMEA", "country": "UK", "brand": "GlobalPharma", "year": 2020, "marketSize": 28000000, "price": 10.5 },
+  { "region": "EMEA", "country": "UK", "brand": "GlobalPharma", "year": 2021, "marketSize": 32000000, "price": 11.0 },
+  { "region": "EMEA", "country": "UK", "brand": "GlobalPharma", "year": 2022, "marketSize": 34000000, "price": 11.5 },
+  { "region": "EMEA", "country": "UK", "brand": "GlobalPharma", "year": 2023, "marketSize": 36000000, "price": 12.0 },
+
+  { "region": "EMEA", "country": "France", "brand": "MediLife", "year": 2020, "marketSize": 25000000, "price": 10.0 },
+  { "region": "EMEA", "country": "France", "brand": "MediLife", "year": 2021, "marketSize": 29000000, "price": 10.8 },
+  { "region": "EMEA", "country": "France", "brand": "MediLife", "year": 2022, "marketSize": 31000000, "price": 11.2 },
+  { "region": "EMEA", "country": "France", "brand": "MediLife", "year": 2023, "marketSize": 33000000, "price": 11.6 },
+
+  { "region": "APAC", "country": "India", "brand": "CureMore", "year": 2018, "marketSize": 35000000, "price": 3.5 },
+  { "region": "APAC", "country": "India", "brand": "CureMore", "year": 2019, "marketSize": 38000000, "price": 3.8 },
+  { "region": "APAC", "country": "India", "brand": "CureMore", "year": 2020, "marketSize": 42000000, "price": 4.0 },
+  { "region": "APAC", "country": "India", "brand": "CureMore", "year": 2021, "marketSize": 85000000, "price": 4.5 },
+  { "region": "APAC", "country": "India", "brand": "CureMore", "year": 2022, "marketSize": 90000000, "price": 4.8 },
+  { "region": "APAC", "country": "India", "brand": "CureMore", "year": 2023, "marketSize": 95000000, "price": 5.0 },
+
+  { "region": "APAC", "country": "Japan", "brand": "VaxX", "year": 2020, "marketSize": 20000000, "price": 13.5 },
+  { "region": "APAC", "country": "Japan", "brand": "VaxX", "year": 2021, "marketSize": 55000000, "price": 14.2 },
+  { "region": "APAC", "country": "Japan", "brand": "VaxX", "year": 2022, "marketSize": 58000000, "price": 14.8 },
+  { "region": "APAC", "country": "Japan", "brand": "VaxX", "year": 2023, "marketSize": 60000000, "price": 15.2 },
+
+  { "region": "APAC", "country": "China", "brand": "BioShield", "year": 2020, "marketSize": 120000000, "price": 6.0 },
+  { "region": "APAC", "country": "China", "brand": "BioShield", "year": 2021, "marketSize": 150000000, "price": 6.5 },
+  { "region": "APAC", "country": "China", "brand": "BioShield", "year": 2022, "marketSize": 160000000, "price": 6.8 },
+  { "region": "APAC", "country": "China", "brand": "BioShield", "year": 2023, "marketSize": 170000000, "price": 7.0 },
+
+  { "region": "APAC", "country": "Australia", "brand": "GlobalPharma", "year": 2021, "marketSize": 8000000, "price": 12.0 },
+  { "region": "APAC", "country": "Australia", "brand": "GlobalPharma", "year": 2022, "marketSize": 8500000, "price": 12.5 },
+  { "region": "APAC", "country": "Australia", "brand": "GlobalPharma", "year": 2023, "marketSize": 9000000, "price": 13.0 }
 ]
