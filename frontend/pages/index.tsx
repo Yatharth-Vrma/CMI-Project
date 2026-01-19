@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import dynamic from 'next/dynamic';
 import { KPICard } from '../components/KPICard';
-import { fetchSummary, fetchVaccines, fetchFilters, fetchInsights } from '../utils/api';
-import { useTheme } from '../utils/ThemeContext';
+import { Sidebar } from '../components/Sidebar';
+import { useDashboardData } from '../hooks/useDashboardData';
 import Head from 'next/head';
 
 const BarChart = dynamic(() => import('../components/BarChart'), { ssr: false });
@@ -12,42 +12,22 @@ const DoughnutChart = dynamic(() => import('../components/DoughnutChart'), { ssr
 const RadarChart = dynamic(() => import('../components/RadarChart'), { ssr: false });
 
 export default function Dashboard() {
-  const { theme, toggleTheme } = useTheme();
-  const [filters, setFilters] = useState({ region: '', brand: '', year: '' });
-  const [filterOptions, setFilterOptions] = useState({ regions: [], brands: [], years: [] });
-  
-  const [summary, setSummary] = useState<any>(null);
-  const [records, setRecords] = useState<any[]>([]);
-  const [insight, setInsight] = useState<string>('');
-  const [loadingInsight, setLoadingInsight] = useState(false);
+  const {
+    filters,
+    setFilters,
+    filterOptions,
+    summary,
+    records,
+    insight,
+    loadingInsight,
+    generateInsight
+  } = useDashboardData();
+
   const [currentDate, setCurrentDate] = useState('');
 
   useEffect(() => {
     setCurrentDate(new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' }));
-    fetchFilters().then(data => { if (data) setFilterOptions(data); });
   }, []);
-
-  useEffect(() => {
-    (async () => {
-      const s = await fetchSummary(filters);
-      setSummary(s);
-      const r = await fetchVaccines(filters);
-      setRecords(r);
-      setInsight('');
-    })();
-  }, [filters]);
-
-  const handleGenerateInsight = async () => {
-    setLoadingInsight(true);
-    try {
-      const res = await fetchInsights(filters);
-      if (res.text) setInsight(res.text);
-      else if (res.error) setInsight(`Error: ${res.error} - ${res.details || ''}`);
-    } catch (e) {
-      setInsight('Failed to generate insights.');
-    }
-    setLoadingInsight(false);
-  };
 
   return (
     <div className="dashboard-container">
@@ -55,47 +35,13 @@ export default function Dashboard() {
         <title>Market Intelligence Dashboard | CMI</title>
       </Head>
 
-      <aside className="sidebar">
-        <div className="brand-title">
-          Coherent <br/> Market Insights
-        </div>
-        
-        <div style={{ flex: 1 }}>
-          <div className="filter-group">
-            <label>Geographic Region</label>
-            <select value={filters.region} onChange={(e) => setFilters({...filters, region: e.target.value})}>
-              <option value="">Global (All Regions)</option>
-              {filterOptions.regions?.map((r: string) => <option key={r} value={r}>{r}</option>)}
-            </select>
-          </div>
-
-          <div className="filter-group">
-            <label>Brand Manufacturer</label>
-            <select value={filters.brand} onChange={(e) => setFilters({...filters, brand: e.target.value})}>
-              <option value="">All Brands</option>
-              {filterOptions.brands?.map((b: string) => <option key={b} value={b}>{b}</option>)}
-            </select>
-          </div>
-
-          <div className="filter-group">
-            <label>Fiscal Year</label>
-            <select value={filters.year} onChange={(e) => setFilters({...filters, year: e.target.value})}>
-              <option value="">All Years</option>
-              {filterOptions.years?.map((y: string) => <option key={y} value={y}>{y}</option>)}
-            </select>
-          </div>
-
-          <hr style={{ border: 'none', borderTop: '1px solid var(--border-color)', margin: '20px 0' }} />
-
-          <button className="primary-btn" onClick={handleGenerateInsight} disabled={loadingInsight}>
-            {loadingInsight ? 'Processing...' : 'Generate Executive Summary'}
-          </button>
-        </div>
-
-        <button className="theme-toggle" onClick={toggleTheme}>
-          {theme === 'light' ? 'Switch to Dark Mode' : 'Switch to Light Mode'}
-        </button>
-      </aside>
+      <Sidebar 
+        filters={filters} 
+        setFilters={setFilters} 
+        filterOptions={filterOptions} 
+        onGenerateInsight={generateInsight}
+        loadingInsight={loadingInsight}
+      />
 
       <main className="main-content">
         <header>

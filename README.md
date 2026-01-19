@@ -122,6 +122,13 @@ npm run dev
 
 ---
 
+## 🏗️ Architecture
+
+For a deep dive into the system architecture, please refer to our Codemaps:
+
+- [Backend Architecture](docs/CODEMAPS/backend.md)
+- [Frontend Architecture](docs/CODEMAPS/frontend.md)
+
 ## 📂 Project Structure
 
 ```bash

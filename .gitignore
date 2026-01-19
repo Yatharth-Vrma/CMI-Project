@@ -30,3 +30,6 @@ out/
 
 # TypeScript
 *.tsbuildinfo
+
+# Ignore Everything Gemini Code repo
+everything-gemini-code-main/

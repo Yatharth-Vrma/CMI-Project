@@ -1,14 +1,19 @@
 import { GoogleGenerativeAI } from '@google/generative-ai';
 import { loadVaccinesData } from '../utils/dataLoader';
+import { config } from '../config';
+import { ApiError } from '../utils/errorHandler';
 
 export async function generateInsight(params: any) {
-  const apiKey = process.env.GEMINI_API_KEY;
-  if (!apiKey) return { error: 'GEMINI_API_KEY not configured' };
+  if (!config.geminiApiKey) {
+    throw new ApiError(500, 'Gemini API Key not configured');
+  }
 
-  const genAI = new GoogleGenerativeAI(apiKey);
+  const genAI = new GoogleGenerativeAI(config.geminiApiKey);
   const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
 
   const data = await loadVaccinesData();
+  
+  // Safe filtering
   const filtered = data.filter((r) => {
     if (params.region && r.region !== params.region) return false;
     if (params.brand && r.brand !== params.brand) return false;
@@ -20,7 +25,19 @@ export async function generateInsight(params: any) {
   const avgPrice = filtered.length ? filtered.reduce((a, r) => a + Number(r.price || 0), 0) / filtered.length : 0;
 
   try {
-    const promptText = `Analyze these vaccine market stats: Total Market Size: ${totalMarket}, Average Price: ${avgPrice}. Context: ${JSON.stringify(params)}. Provide 2 high-level, concise executive business insights. Avoid jargon.`;
+    const promptText = `
+      Context: Global Vaccine Market Analysis.
+      Filters Applied: ${JSON.stringify(params)}.
+      Data Summary: 
+      - Total Market Size: $${totalMarket.toLocaleString()}
+      - Average Unit Price: $${avgPrice.toFixed(2)}
+      
+      Task: Provide an executive summary of these metrics.
+      Format: 
+      - 2 concise paragraphs.
+      - Professional tone (Bloomberg/McKinsey style).
+      - Focus on growth implications and pricing strategy.
+    `;
     
     const result = await model.generateContent(promptText);
     const response = await result.response;
@@ -28,7 +45,7 @@ export async function generateInsight(params: any) {
     
     return { text: text.trim(), totalMarket, avgPrice };
   } catch (e: any) {
-    console.error(e);
-    return { error: 'Gemini AI failed', details: e.message };
+    console.error("Gemini Error:", e);
+    throw new ApiError(502, 'Failed to generate insights from AI provider');
   }
 }

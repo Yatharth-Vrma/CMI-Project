@@ -48,7 +48,7 @@ export default function RadarChart({ data }: { data: any[] }) {
       r: {
         angleLines: { color: isDark ? '#343A40' : '#DEE2E6' },
         grid: { color: isDark ? '#343A40' : '#DEE2E6' },
-        pointLabels: { color: isDark ? '#ADB5BD' : '#6C757D', font: { size: 11, weight: 'bold' } },
+        pointLabels: { color: isDark ? '#ADB5BD' : '#6C757D', font: { size: 11, weight: 'bold' as const } },
         ticks: { display: false, backdropColor: 'transparent' }
       }
     },
