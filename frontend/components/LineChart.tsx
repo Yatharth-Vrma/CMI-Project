@@ -7,11 +7,12 @@ import {
   Title,
   Tooltip,
   Legend,
+  Filler
 } from 'chart.js';
 import { Line } from 'react-chartjs-2';
 import { useTheme } from '../utils/ThemeContext';
 
-ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
+ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend, Filler);
 
 export default function LineChart({ data }: { data: any[] }) {
   const { theme } = useTheme();
