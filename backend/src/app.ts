@@ -31,6 +31,7 @@ app.use('/api/vaccines', vaccineRouter);
 app.use('/api/summary', summaryRouter);
 app.use('/api/insights', insightsRouter);
 app.use('/api/health', healthRouter);
+app.get('/healthz', (_req, res) => res.json({ status: 'ok' }));
 
 app.get('/', (_req, res) => res.send('Health Insight Dashboard Backend'));
 

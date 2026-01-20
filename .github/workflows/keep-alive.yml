@@ -1,0 +1,16 @@
+name: Render Keep Alive
+
+on:
+  schedule:
+    - cron: '*/14 * * * *' # Pings every 14 minutes to prevent Render's 15-minute sleep
+  workflow_dispatch:      # Allows manual triggering for testing
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Backend Service
+        run: |
+          BACKEND_URL="https://health-insight-backend-ymc7.onrender.com/api/health"
+          echo "Pinging $BACKEND_URL..."
+          curl -f -s $BACKEND_URL || echo "Ping failed. Ensure the URL is correct and the service is public."
