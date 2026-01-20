@@ -38,7 +38,7 @@
 
 | **Light Mode (Day)** | **Dark Mode (Night)** |
 |:---:|:---:|
-| ![Light Mode](frontend/public/placeholder.txt) | ![Dark Mode](frontend/public/placeholder.txt) |
+| ![Light Mode](Light%20Mode%20(Day).jpeg) | ![Dark Mode](Dark%20Mode%20(Night).jpeg) |
 | *Clean, professional analytics.* | *High-contrast, immersive data.* |
 
 ---
