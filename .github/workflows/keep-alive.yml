@@ -1,6 +1,8 @@
 name: Render Keep Alive
 
 on:
+  push:
+    branches: [ "main" ]  # Run immediately on push to wake it up
   schedule:
     - cron: '*/14 * * * *' # Pings every 14 minutes to prevent Render's 15-minute sleep
   workflow_dispatch:      # Allows manual triggering for testing
